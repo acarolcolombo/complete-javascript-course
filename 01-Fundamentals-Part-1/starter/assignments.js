@@ -36,9 +36,29 @@ const averagePopulation = 33;
 console.log(population > finlandPopulation);
 console.log(population < averagePopulation);
 
-const description = country + " " + "is in " + continent + ", and its " + population + " " + "million people speak " + language;
+let description = country + " " + "is in " + continent + ", and its " + population + " " + "million people speak " + language;
 console.log(description);
 
+//STRINGS AND TEMPLATE LITERALS
+description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
+console.log(description);
 
+//TAKING DECISIONS: IF/ELSE STATEMENTS
+if(population >= averagePopulation){
+    console.log(`${country}'s population is above average`);
+} else {
+    const averageMinusPopulation = averagePopulation - population;
+    console.log(`${country}'s population is ${averageMinusPopulation} million below average`);
+}
 
-
+//TYPE CONVERSION AND COERCION
+let n = "9"-"5"; //4
+console.log(n);
+n = "19"-"13"+"17"; //617
+console.log(n);
+n = "19"-"13"+17; //23
+console.log(n);
+n="123"< 57; //false
+console.log(n);
+n=5+6+"4"+9-4-2; //1143
+console.log(n);

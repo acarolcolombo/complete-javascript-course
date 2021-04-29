@@ -132,74 +132,132 @@ const averageAge = (ageJonas + ageSara) / 2;
 console.log(ageJonas, ageSara, averageAge);
 */
 
-//////////////////////////////////////////////////////////////
+/*STRINGS AND TEMPLATE LITERALS
+const firstName = "Ana";
+const job = "biologist";
+const birthYear = 1989;
+const year = 2037;
 
-//Coding Challenge #1
+const ana = "I'm " + firstName + ", a " + (year - birthYear) + " year old " + job + "!"
+console.log(ana);
 
-/* Mark and John are trying to compare their BMI (Body Mass Index), which is
-calculated using the formula:
-BMI = mass / height ** 2 = mass / (height * height) (mass in kg
-and height in meter).
+const anaNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(anaNew);
 
-Your tasks:
-1.Store Mark's and John's mass and height in variables
-2.Calculate both their BMIs using the formula (you can even implement both
-versions)
-3.Create a Boolean variable 'markHigherBMI' containing information about
-whether Mark has a higher BMI than John.
+console.log(`Just a regular string...`);
 
-Test data:
-Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95
-m tall.
-Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76
-m tall.
+console.log("String with \n\
+multiple\n\
+lines");
 
-GOOD LUCK 😀
-
-
-//Task 1
-const markMass1 = 78;
-const markMass2 = 95;
-const markHeight1 = 1.69;
-const markHeight2 = 1.88;
-console.log(markMass1, markMass2, markHeight1, markHeight2);
-
-const johnMass1 = 92;
-const johnMass2 = 85;
-const johnHeight1 = 1.95;
-const johnHeight2 = 1.76;
-console.log(johnMass1, johnMass2, johnHeight1, johnHeight2);
-
-//Task 2
-const markBMI1 = markMass1 / markHeight1 ** 2;
-const markBMI2 = markMass2 / (markHeight2 * markHeight2);
-console.log(markBMI1, markBMI2);
-
-const johnBMI1 = johnMass1 / johnHeight1 ** 2;
-const johnBMI2 = johnMass2 / (johnHeight2 * johnHeight2);
-console.log(johnBMI1, johnBMI2);
-
-//Task 3
-const markHigherBMI1 = markBMI1 > johnBMI1;
-const markHigherBMI2 = markBMI2 > johnBMI2;
-console.log(markHigherBMI1, markHigherBMI2);
-
-////////////////////////////////////////////
-//Another option:
-// const markMass = 78;
-// const markHeight = 1.69;
-// const johnMass = 92;
-// const johnHeight = 1.95;
-// console.log(markMass, markHeight, johnMass, johnHeight);
-
-const markMass = 95;
-const markHeight = 1.88;
-const johnMass = 85;
-const johnHeight = 1.76;
-console.log(markMass, markHeight, johnMass, johnHeight);
-
-const markBMI = markMass / markHeight ** 2;
-const johnBMI = johnMass / (johnHeight * johnHeight);
-const markHigherBMI = markBMI > johnBMI;
-console.log(markBMI, johnBMI, markHigherBMI);
+console.log(`String with
+multiple
+lines`);
 */
+
+/*TAKING DECISIONS: IF/ELSE STATEMENTS
+const age = 15;
+//const isOldEnough = age >= 18;
+
+if(age >= 18) {
+    console.log("Sara can start her driving license");
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`Sara is too young. Wait another ${yearsLeft} years ;)`);
+}
+
+//if(){
+//
+//} else {
+//
+//}
+
+const birthYear = 2012;
+
+let century; //we have to define a variable outside the code block (if and else) because variables defined inside the code block will not be accessible outside of the block.
+if(birthYear <= 2000) {
+    century = 20;
+} else{
+    century = 21;
+}
+console.log(century); 
+*/
+
+/*TYPE CONVERSION AND COERCION
+//conversion = manually (Number, String and Boolean(next lesson))
+//coercion = automatically, behind the scenes
+
+// type conversion
+const inputYear = "1991";
+console.log(inputYear + 18); //199118
+console.log(Number(inputYear), inputYear);
+console.log(inputYear + 18); //199118
+console.log(Number(inputYear) + 18); //2009
+
+console.log(Number("Jonas")); //NaN = not a number = invalid number
+console.log(typeof NaN); //number
+
+console.log(String(23)); //23 as a string
+
+// type coercion
+console.log("I am " + 23 + " years old." );
+console.log("I am " + "23" + " years old." );//don't need to do it
+console.log("I am " + String(23) + " years old." );//don't need to do it
+
+console.log("23" - "10" - 3); //strings converted into numbers automatically
+console.log("23" + "2"); //exception: if we use the plus sign.
+console.log("23" * 2);
+console.log("23" / 2);
+console.log("23" > 2);
+
+let n = "1" + 1; //string 11
+n = n - 1; // string will be converted in a umber = 10
+console.log(n); //10
+
+n = 2+3+4+"5";
+console.log(n); //95
+
+n = "10"-"4"-"3"-2+"5";
+console.log(n); //15
+*/
+
+/*TRUTHY AND FALSY VALUES
+//5 falsy values (not exaclty false but will be false when trying to convert in a boulean): 0, " ", undefinied, null, NaN
+//everything else = truthy values
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Jonas"));
+console.log(Boolean({}));
+console.log(Boolean(""));
+
+let money = 0;
+if(money){
+    console.log("Don't spend it all ;)");
+} else {
+    console.log("You should get a job!");
+}
+
+money = 1000;
+if(money){
+    console.log("Don't spend it all ;)");
+} else {
+    console.log("You should get a job!");
+}
+
+let height;
+if(height){
+    console.log("Yay! Height is defined");
+} else {
+    console.log("Height is undefined");
+}
+
+height =0;
+if(height){
+    console.log("Yay! Height is defined");
+} else {
+    console.log("Height is undefined");
+} //again - height is undefined -- not what we want. 0 is also a falsy value
+*/
+
+//EQUALITY OPERATORS: == VS. ===
