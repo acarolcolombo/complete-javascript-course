@@ -62,3 +62,26 @@ n="123"< 57; //false
 console.log(n);
 n=5+6+"4"+9-4-2; //1143
 console.log(n);
+
+//EQUALITY OPERATORS: == VS. ===
+let numNeighbours = prompt("How many neighbour countries does your country have?");
+console.log(numNeighbours);
+if(numNeighbours == 1){
+    console.log("Only 1 border!");
+} else if(numNeighbours > 1){
+    console.log("More than 1 border");
+} else {
+    console.log("No borders");
+}
+
+numNeighbours = Number(prompt("How many neighbour countries does your country have?")); //if numNeighbours = 1 --> result = no borders because 1 is a string. I have to convert numNeighbours to a number.
+console.log(numNeighbours);
+console.log(typeof numNeighbours);
+console.log(numNeighbours);
+if(numNeighbours === 1){
+    console.log("Only 1 border!");
+} else if(numNeighbours > 1){
+    console.log("More than 1 border");
+} else {
+    console.log("No borders");
+}

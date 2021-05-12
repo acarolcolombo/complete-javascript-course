@@ -260,4 +260,54 @@ if(height){
 } //again - height is undefined -- not what we want. 0 is also a falsy value
 */
 
-//EQUALITY OPERATORS: == VS. ===
+/*EQUALITY OPERATORS: == VS. ===
+let age = 18;
+if(age === 18) console.log("You just became an adult :D) (strict)");
+
+18 === 18 //true
+18 === 19 //false
+"18" == 18 // true (type coercion)
+"18" === 18 //false
+
+if(age == 18) console.log("You just became an adult :D) (loose)");
+
+age = "18";
+if(age === 18) console.log("You just became an adult :D) (strict)");
+if(age == 18) console.log("You just became an adult :D) (loose)");
+//avoid loose equality as much as you can
+
+let favourite = prompt("What is your favorite number?");
+console.log(favourite);
+console.log(typeof favourite); //string
+
+if (favourite == 23) { //"23" == 23
+    console.log("Cool! 23 is an amazing number!");
+}
+
+if (favourite === 23) { //it doesn't work
+    console.log("Cool! 23 is an amazing number!");
+}
+
+favourite = Number(prompt("What is your favorite number?"));
+console.log(favourite);
+console.log(typeof favourite); //number
+
+if (favourite === 23) { //it works!
+    console.log("Cool! 23 is an amazing number!");
+} else if(favourite === 7) {
+    console.log("7 is also a cool number");
+} else if(favourite === 9){
+    console.log("9 is also a cool number");
+} else {
+    console.log("Number is not 23 or 7 or 9");
+}
+
+if(favourite !== 23) console.log("Why not 23?");
+*/
+
+/*BOOLEAN LOGIC
+//AND, OR & NOT OPERATORS
+Theory
+*/
+
+//LOGICAL OPERATORS
