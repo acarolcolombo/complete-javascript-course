@@ -310,4 +310,36 @@ if(favourite !== 23) console.log("Why not 23?");
 Theory
 */
 
-//LOGICAL OPERATORS
+/*LOGICAL OPERATORS
+let hasDriversLicense = true; //A
+let hasGoodVision = true; //B
+
+console.log(hasDriversLicense && hasGoodVision); //true
+console.log(hasDriversLicense || hasGoodVision); //true
+console.log(!hasDriversLicense); //false
+
+
+hasDriversLicense = true; //A
+ hasGoodVision = false; //B
+
+console.log(hasDriversLicense && hasGoodVision); //false
+console.log(hasDriversLicense || hasGoodVision); //true
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+if(shouldDrive){ //OR hasDriversLicense && hasGoodVision
+    console.log('Sarah is able to drive!');
+} else {
+    console.log('Someone else should drive...');
+}
+
+const isTired = true; //C
+console.log(hasDriversLicense || hasGoodVision || isTired); //true
+console.log(hasDriversLicense && hasGoodVision && isTired); //false
+
+if(hasDriversLicense && hasGoodVision && !isTired){
+    console.log('Sarah is able to drive!');
+} else {
+    console.log('Someone else should drive...'); //someone else should drive
+}
+*/
