@@ -386,3 +386,38 @@ if(day == "monday"){
 */
 
 //STATEMENTS AND EXPRESSIONS
+/*expression: piece of code that produces a value. Examples:
+3 + 4 
+1991
+true && false && !false
+
+statements: bigger piece of code that it is executed and can't produce a value. Full sentences that translate our actions. Example:
+
+if(23>10){
+    const str = '23 is bigger';
+}
+
+Template literal can only insert expressions and not statements:
+const me = "Jonas";
+console.log(`I'm ${2037-1991} years old ${me}`)
+*/
+
+//THE CONDITIONAL (TERNARY) OPERATOR
+const age = 23;
+age >= 18 ? console.log("I like to drink wine") : console.log("I like to drink water");
+
+//operator and expression = always produces a value. You can assign a value to a variable.
+
+const drink = age >= 18 ?  "wine" : "water";
+console.log(drink);
+
+let drink2;
+if(age >= 18) {
+    drink2 =  "wine";
+} else{
+    drink2 = "water";
+}
+console.log(drink2);
+
+//ternary operator is an expression. we can use in a template literal.
+console.log(`I like to drink ${age >= 18 ?  "wine" : "water"}`);

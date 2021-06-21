@@ -128,3 +128,12 @@ switch(language) {
     default:
         console.log("Great language too =)");
 }
+
+//THE CONDITIONAL (TERNARY) OPERATOR
+
+population >= 33 ? console.log("Brazil's population is above average") : console.log("Brazil's population is below average");
+
+//OR 
+
+populationComparison = population >= 33 ? "Brazil's population is above average" : "Brazil's population is below average";
+console.log(populationComparison);
