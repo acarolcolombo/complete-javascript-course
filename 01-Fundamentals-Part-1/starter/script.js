@@ -421,3 +421,6 @@ console.log(drink2);
 
 //ternary operator is an expression. we can use in a template literal.
 console.log(`I like to drink ${age >= 18 ?  "wine" : "water"}`);
+
+//JAVASCRIPT RELEASES: ES5, ES6+ AND ESNEXT
+//theoretical lesson
